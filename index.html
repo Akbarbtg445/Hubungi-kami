@@ -11,6 +11,52 @@
      <link rel="stylesheet" href="Heya.css">
      
 </head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0; /* Background color for the body */
+    }
+    .taskbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333; /* Dark background color for the taskbar */
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 20px;
+        box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow at the bottom */
+        z-index: 1000; /* Ensures it stays above other content */
+    }
+    .taskbar-item {
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .taskbar-item:hover {
+        background-color: #555; /* Darker background color on hover */
+    }
+    .quick-links {
+        display: flex;
+        align-items: center;
+        height: 1px;
+    }
+    .quick-link {
+        margin-left: 20px;
+        padding: 8px 12px;
+        background-color: #555;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        border-radius: 4px;
+    }
+    .quick-link:hover {
+        background-color: #777;
+    }
+    </style>
 <body>
     <nav class="navbar">
         <div class="logo">
@@ -18,8 +64,8 @@
         </div>
         <div class="nav-links">
             <ul>
-                <li><a href=" https://akbarbtg445.github.io/Heyaweb/">Home</a></li>
-                <li><a href="https://akbarbtg445.github.io/Carasewa/">Cara Sewa</a></li>
+                <li><a href="https://akbarbtg445.github.io/Heyaweb/" class="active">Home</a></li>
+                <li><a href="#">Cara Sewa</a></li>
                 <li><a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MjQ0MzExNDEyMjY3NTEy?story_media_id=3410477476047537277_55662927827&igsh=MWk1bDRvb2RrZWF0bg==">Pengumuman</a></li>
                 <li><a href="#">Alat yang disewakan</a></li>
                 <li><a href="#">Paket sewa</a></li>
@@ -28,7 +74,6 @@
         </div>
     </nav>
     
-     
 </body>
 <body>
     <div class="container mt-5">
@@ -44,5 +89,21 @@
             <a href="https://maps.google.com/?cid=3209998950693696783&entry=gps&g_st=aw">Lokasi</a>
         </div1>
     </div>
+</div>
+<div class="taskbar">
+    <div class="taskbar-item">Settings</div>
+    <div class="copyright">
+        &copy; 2024 Perentalan Alat Outdoor Heyacamp. All rights reserved.
+    </div>
+    
+    
+
+    <!-- Quick Links -->
+    <div class="quick-links">
+        <a href="https://www.instagram.com/heyacampp_?igsh=NndpZ2d6dXh0bzBx" class="quick-link">Instagram</a>
+        <a href="https://wa.link/o87fdz" class="quick-link">WhatsApp</a>
+        <a href="https://g.co/kgs/Pk3FV4i" class="quick-link">Google maps</a>
+    </div>
+</div>
 </body>
 </html>
