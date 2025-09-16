@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-bottom: 100px; /* space for taskbar */
+  background-image: url(ya.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  font-size: 32px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-align: center;
+  font-family: monospace;
+}
+
+h1 {
+  color: #4CAF50;
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+h2 {
+  color: #4CAF50;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Taskbar */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.taskbar-item {
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quick-link {
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 1rem;
+  transition: background-color 0.3s;
+}
+
+.quick-link:hover {
+  background-color: #777;
+}
+
+/* Responsive Taskbar */
+@media (max-width: 768px) {
+  .taskbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+}
+
+/* Theme Modes */
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .taskbar {
+  background-color: #222;
+  color: #f0f0f0;
+}
+
+body.dark-mode .quick-link {
+  background-color: #444;
+}
+
+body.dark-mode .quick-link:hover {
+  background-color: #666;
+}
